@@ -37,8 +37,9 @@
                     <td><?= $d['id']; ?></td>
                     <td><?= $d['npm']; ?></td>
                     <td><?= $d['status']; ?></td>
-                    <td> <a href="#" class="btn btn-warning"> Edit</a>
-                        <a href="#" class="btn btn-danger">Hapus</a>
+                    <td> <a href="/datauser/edit/<?= $d['id']; ?>" class="btn btn-warning"> Edit</a>
+
+                        <a href="/datauser/delete/<?= $d['id']; ?>" class="btn btn-danger">Hapus</a>
                     <td>
                 </tr>
             <?php endforeach; ?>

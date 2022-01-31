@@ -16,6 +16,9 @@
 
 <body>
 
+    <?= $this->include("layout/navbar.php"); ?>
+
+
     <div class="login-box">
         <h2>Login</h2>
         <?php if (!empty(session()->getFlashdata('error'))) : ?>
@@ -26,20 +29,16 @@
         <form method="post" action="<?= base_url(); ?>/login/process">
             <?= csrf_field(); ?>
             <div class="user-box">
-                <input type="text" name="nik" required="">
-                <label>Username</label>
+                <input type="text" name="npm" required="">
+                <label>NPM</label>
             </div>
             <div class="user-box">
-                <input type="password" name="password" required="">
-                <label>Password</label>
+                <input type="password" name="token" required="">
+                <label>Token</label>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </a>
+            <span></span>
+            <input type="submit" class="tombol">
+            <span></span>
         </form>
     </div>
 
