@@ -64,11 +64,45 @@
     </section>
 
     <!--==========================
+      About Section Bagian NGURAH
+    ============================-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h2>About voteOn</h2>
+                    <p>voteOn adalah portal pemilihan umum bagi warga desa Putat Nutug untuk memilih kepala desa pada tahun 2022.
+                        Website ini dibangun dengan HTML , CSS dan PHP dengan menggunakan framework bootstrap. Website ini dibuat untuk memenuhi project tugas akhir mata kuliah Pemrograman Web tingkat III RPLK
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Syarat Memilih</h3>
+                    <li>Warga Negara Indonesia </li>
+                    <li>Warga yang telah genap berusia tujuh belas tahun </li>
+                    <li>Terdaftar sebagai pemilih di DPT</li>
+                    <li>Tidak sedang terganggu jiwa/ingatannya</li>
+                    <li>Tidak sedang dicabut hak pilihnya berdasarkan keputusan pengadilan yang telah mempunyai hukum tetap,</li>
+                </div>
+                <div class="col-lg-5">
+                    <h3>Instruction</h3>
+                    <li>Masuk ke menu login</li>
+                    <li>Masukan NIK dan token</li>
+                    <li>Klik foto calon kepala Desa yang ingin dipilih</li>
+                    <li>Klik Submit</li>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================
       Login Section
     ============================-->
     <section id="login">
 
     </section>
+
+    
 
     <!--==========================
     Footer
