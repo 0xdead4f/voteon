@@ -402,10 +402,13 @@ color:#29CB6D;
 }
 #about{ 
     
-  background: #0363A1;
+  background: #8c52ff;
     text-align:left;
     padding: 5em 0;
 	background-size:cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 #curveUpColor1 path, #curveDownColor1 path {
     fill: #30B0BB;
@@ -653,7 +656,7 @@ h3.tittle {
    transition: all 0.3s ease-in-out;
 }
 .view-fifth .mask {
-  background-color:#30B0BB;
+  background-color:#8c52ff;
    -webkit-transform: translateX(-300px);
    -moz-transform: translateX(-300px);
    -o-transform: translateX(-300px);
@@ -718,7 +721,7 @@ h3.tittle {
 a#profile-tab, a#home-tab, a#profile-tab1{
     color: #fff;
     border-radius: 0;
-    background-color: #30B0BB;
+    background-color: #8c52ff;
 	padding:1em; border:none;
     border-top-right-radius: 0.2em;
     -webkit- border-top-right-radius: 0.2em;
@@ -857,6 +860,7 @@ h3.tittle.pro {
 }
 .team-left img{
 	width:100%;
+	height:280px;
 }
 .team-left{
     float: left;
@@ -2368,13 +2372,17 @@ form input[type="reset"]:hover {
     width:100% !important;
 }
 .team{
-    background:#0363a1 !important;
+    background:#5224d4 !important;
 }
 }
 
 @media only screen and (min-width: 900px) {
 	.team-left{
 		margin: 0px 0px 35px 10px;
+	}
+
+	.flex-responsi{
+		display: flex;
 	}
 	
 }
