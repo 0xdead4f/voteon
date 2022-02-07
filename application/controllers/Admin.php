@@ -9,4 +9,13 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model('m_admin');
     }
+
+    public function opsi()
+    {
+
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+        $this->load->view('admin/v_opsi');
+    }
 }
