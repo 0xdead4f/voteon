@@ -10,6 +10,7 @@ class Admin extends CI_Controller
         $this->load->model('m_admin');
     }
 
+    //8
     public function opsi()
     {
 
@@ -17,5 +18,18 @@ class Admin extends CI_Controller
             redirect('admin');
         }
         $this->load->view('admin/v_opsi');
+    }
+
+    //9
+    public function reset_surat_suara()
+    {
+        $status = $this->m_admin->deleteSuratSuara();
+        if ($status) {
+            $this->session->set_flashdata('success', 'Berhasil mereset surat suara');
+            redirect('admin/opsi');
+        } else {
+            $this->session->set_flashdata('fail', 'Gagal mereset surat suara');
+            redirect('admin/opsi');
+        }
     }
 }
