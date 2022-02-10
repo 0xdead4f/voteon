@@ -50,4 +50,22 @@ class Admin extends CI_Controller
         }
     }
 
+     //11
+     public function reset_status_pemilih()
+     {
+         if (!$this->session->userdata('login')) {
+             redirect('admin');
+         }
+ 
+         $object = array('status' => 0);
+         $status = $this->db->where('status', 1)->update('data_pemilih', $object);
+         if ($status) {
+             $this->session->set_flashdata('success', 'Berhasil reset status pemilih');
+             redirect('admin/opsi');
+         } else {
+             $this->session->set_flashdata('fail', 'Gagal reset status pemilih');
+             redirect('admin/opsi');
+         }
+     }
+
 }
