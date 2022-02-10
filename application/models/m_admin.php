@@ -25,4 +25,10 @@ class M_admin extends CI_Model
             return false;
         }
     }
+
+    // mengambil Data warga
+    public function get_warga()
+    {
+        return $this->db->get('data_pemilih')->result();
+    }
 }

@@ -44,5 +44,12 @@ class Admin extends CI_Controller
 
         $this->load->view('admin/v_menu');
     }
+
+    // Menampilkan tabulasi data warga
+    public function warga()
+    {
+        $data['warga'] = $this->m_admin->get_warga();
+        $this->load->view('admin/v_warga', $data);
+    }
 }
 
