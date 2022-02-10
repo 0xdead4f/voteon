@@ -68,4 +68,13 @@ class Admin extends CI_Controller
          }
      }
 
+     //12
+    public function pemilih()
+    {
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+        $this->load->view('admin/v_inputpemilih');
+    }
+
 }
