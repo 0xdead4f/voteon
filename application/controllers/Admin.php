@@ -10,7 +10,7 @@ class Admin extends CI_Controller
         $this->load->model('m_admin');
     }
 
-    //8
+    //menampilkan halaman opsi
     public function opsi()
     {
 
@@ -20,7 +20,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/v_opsi');
     }
 
-    //9
+    //mereset surat suara ketika surat suara redundan
     public function reset_surat_suara()
     {
         $status = $this->m_admin->deleteSuratSuara();
@@ -33,7 +33,7 @@ class Admin extends CI_Controller
         }
     }
 
-    //10
+    //membuat reset data suara untuk mereset token atau data suara
     public function reset_data_suara()
     {
         if (!$this->session->userdata('login')) {
@@ -50,7 +50,7 @@ class Admin extends CI_Controller
         }
     }
 
-     //11
+     //mereset status warga untuk dapat memilih
      public function reset_status_pemilih()
      {
          if (!$this->session->userdata('login')) {
@@ -68,7 +68,7 @@ class Admin extends CI_Controller
          }
      }
 
-     //12
+     //menampilkan halaman input pemilih
     public function pemilih()
     {
         if (!$this->session->userdata('login')) {
@@ -77,7 +77,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/v_inputpemilih');
     }
 
-     //13
+     //membuat proses insert data pemilih
      public function insert_pemilih()
      {
          $object = array(
@@ -94,5 +94,24 @@ class Admin extends CI_Controller
              redirect('admin/pemilih');
          }
      }
+
+     //melakukan proses logout (menghancurkan session)
+    public function logout()
+    {
+        $this->session->sess_destroy();
+
+        redirect('admin');
+    }
+
+    //melakukan proses insert nama pemilihan umum
+    public function insert_pemilihan()
+    {
+        if ($this->m_admin->insert_pemilihan()) {
+            redirect('admin/calon');
+        } else {
+            $this->session->set_flashdata('fail', 'Setup Gagal');
+            redirect('admin/calon');
+        }
+    }
 
 }
