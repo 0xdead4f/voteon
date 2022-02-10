@@ -32,4 +32,22 @@ class Admin extends CI_Controller
             redirect('admin/opsi');
         }
     }
+
+    //10
+    public function reset_data_suara()
+    {
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+        $object = array('status' => 0);
+        $status = $this->db->where('status', 1)->update('data_suara', $object);
+        if ($status) {
+            $this->session->set_flashdata('success', 'Berhasil reset surat suara');
+            redirect('admin/opsi');
+        } else {
+            $this->session->set_flashdata('fail', 'Gagal reset data suara');
+            redirect('admin/opsi');
+        }
+    }
+
 }
