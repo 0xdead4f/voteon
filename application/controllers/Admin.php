@@ -10,6 +10,21 @@ class Admin extends CI_Controller
         $this->load->model('m_admin');
     }
 
+    // Halaman login admin
+    public function index()
+    {
+        if ($this->session->userdata('login')) {
+            redirect('admin/menu');
+        }
+
+        if ($this->session->userdata('login_user')) {
+            redirect('pilih');
+        }
+
+        $this->load->view('admin/v_login');
+    }
+
+    // Login 
     public function login()
     {
         if ($this->m_admin->login()) {
@@ -18,6 +33,16 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('fail', 'Login Gagal');
             redirect('admin');
         }
+    }
+
+    // Tampilan halaman menu
+    public function menu()
+    {
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+
+        $this->load->view('admin/v_menu');
     }
 }
 
