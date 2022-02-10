@@ -77,4 +77,22 @@ class Admin extends CI_Controller
         $this->load->view('admin/v_inputpemilih');
     }
 
+     //13
+     public function insert_pemilih()
+     {
+         $object = array(
+             'id' => $this->input->post('id'),
+             'nik' => $this->input->post('nik'),
+             'status' => $this->input->post('status')
+         );
+         $status = $this->db->insert('data_pemilih', $object);
+         if ($status) {
+             $this->session->set_flashdata('success', 'Berhasil input data');
+             redirect('admin/pemilih');
+         } else {
+             $this->session->set_flashdata('fail', 'Gagal input data');
+             redirect('admin/pemilih');
+         }
+     }
+
 }
