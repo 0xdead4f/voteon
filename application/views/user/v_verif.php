@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/home-css/img/logo.png">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/login/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>assets/login/css/owl.carousel.min.css">
@@ -17,7 +17,10 @@
     <!-- Style -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/login/css/style.css">
 
-    <title>Login #7</title>
+    <title>Log In</title>
+
+
+
 </head>
 
 <body>
@@ -37,10 +40,17 @@
                                 <h3>Log In</h3>
                                 <p class="mb-4">Harap untuk login dengan memasukan NIK dan token agar bisa melakukan e-voting.</p>
                             </div>
-                            <form action="#" method="post">
+                            <?php if ($this->session->flashdata('fail') != '') : ?>
+                                <div class="col-md-12">
+                                    <div class="alert alert-danger">
+                                        <span><b> Failed - </b> <?php echo $this->session->flashdata('fail'); ?></span>
+                                    </div>
+                                </div>
+                            <?php endif ?>
+                            <form action="<?php echo base_url(); ?>pilih/verif" method="post">
                                 <div class="form-group first">
                                     <label for="NIK">NIK</label>
-                                    <input type="text" class="form-control" id="NIK" name="NIK">
+                                    <input type="text" class="form-control" id="NIK" name="nik">
 
                                 </div>
                                 <div class="form-group last mb-4">
@@ -58,6 +68,7 @@
                                 </div>
 
                                 <input type="submit" value="Log In" class="btn btn-block btn-primary">
+
 
                             </form>
                         </div>
