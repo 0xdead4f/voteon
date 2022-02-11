@@ -51,53 +51,59 @@ class Pilih extends CI_Controller
         $this->load->view('user/v_pilih', $data);
     }
 
+    public function logout()
+    {
+        // $this->session->sess_destroy();
+        $array = array(
+            'nik' => $nik->nik,
+            'token' => $token->identitas,
+            'status_suara' => $token->status,
+            'status_pemilih' => $nik->status,
+        );
+
+        $this->session->unset_userdata($array);
+
+        redirect('home/index');
+    }
+
+    public function get_id()
+    {
+        $id = $this->m_pilih->get_id()->id;
+        $this->update_suara($id, $this->session->userdata('token'));
+
+        echo $id;
+    }
+
     public function update_suara($id, $ident)
     {
-        $object = array('status' => 1, 'token' => $ident);
-
-        $this->db->where('id', $id)->update('surat_suara', $object);
-
-
-        if ($this->db->affected_rows() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->m_pilih->update_suara($id, $ident);
     }
 
     public function pilih_suara()
     {
-        $object = array('suara' => $this->input->post('suara'));
-        $this->db->where('id', $this->input->post('ident'))->update('surat_suara', $object);
 
-        if ($this->db->affected_rows() > 0) {
-            return true;
+        if ($this->m_pilih->pilih_suara() == true) {
+            $this->update_data_suara();
+            $this->update_data_pemilih();
+            $array = array(
+                'status_pemilih' => 1
+            );
+
+            $this->session->set_userdata($array);
+
+            echo "done";
         } else {
-            return false;
+            echo 'fail';
         }
     }
 
-    public function update_data_suara($ident)
+    public function update_data_suara()
     {
-        $object = array('status' => 1);
-        $this->db->where('identitas', $ident)->update('data_suara', $object);
-
-        if ($this->db->affected_rows() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->m_pilih->update_data_suara($this->session->userdata('token'));
     }
 
-    public function update_data_pemilih($nik)
+    public function update_data_pemilih()
     {
-        $object = array('status' => 1);
-        $this->db->where('nik', $nik)->update('data_pemilih', $object);
-
-        if ($this->db->affected_rows() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->m_pilih->update_data_pemilih($this->session->userdata('nik'));
     }
 }
