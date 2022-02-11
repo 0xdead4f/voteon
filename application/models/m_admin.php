@@ -59,4 +59,10 @@ class M_admin extends CI_Model
 
         return $this->db->select('suara')->where('status', '1')->where('suara !=', '')->limit(1, $limit)->get('surat_suara')->result();
     }
+
+    // form input calon
+    public function getNamaPemilu()
+    {
+        return $this->db->select_max('nomor')->get('calon_kades')->row();
+    }
 }

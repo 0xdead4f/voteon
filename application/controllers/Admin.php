@@ -81,5 +81,17 @@ class Admin extends CI_Controller
         }
     }
 
+    //6. menampilkan halaman insert calon kades
+    public function calon()
+    {
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+
+
+        $data['pemilu'] = $this->m_admin->getNamaPemilu();
+        $this->load->view('admin/v_calon', $data);
+    }
+
 }
 
