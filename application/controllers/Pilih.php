@@ -50,4 +50,54 @@ class Pilih extends CI_Controller
         $data['jumlah'] = $this->m_admin->getIDPemilu()->jumlah;
         $this->load->view('user/v_pilih', $data);
     }
+
+    public function update_suara($id, $ident)
+    {
+        $object = array('status' => 1, 'token' => $ident);
+
+        $this->db->where('id', $id)->update('surat_suara', $object);
+
+
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function pilih_suara()
+    {
+        $object = array('suara' => $this->input->post('suara'));
+        $this->db->where('id', $this->input->post('ident'))->update('surat_suara', $object);
+
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function update_data_suara($ident)
+    {
+        $object = array('status' => 1);
+        $this->db->where('identitas', $ident)->update('data_suara', $object);
+
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function update_data_pemilih($nik)
+    {
+        $object = array('status' => 1);
+        $this->db->where('nik', $nik)->update('data_pemilih', $object);
+
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
