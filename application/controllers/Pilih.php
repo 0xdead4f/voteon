@@ -32,4 +32,22 @@ class Pilih extends CI_Controller
             redirect('pilih');
         }
     }
+
+    public function calon()
+    {
+
+        //jika bukan session user yang login maka redirect ke login
+        if (!$this->session->userdata('login_user')) {
+            redirect('pilih');
+        }
+        //jika sudah memilih maka diarahkan untuk ke home
+        if ($this->session->userdata('status_pemilih') == 1) {
+            $this->session->sess_destroy();
+            redirect('/');
+        }
+
+        $data['calon'] = $this->m_pilih->get_calon();
+        $data['jumlah'] = $this->m_admin->getIDPemilu()->jumlah;
+        $this->load->view('user/v_pilih', $data);
+    }
 }

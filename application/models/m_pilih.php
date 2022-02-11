@@ -52,4 +52,14 @@ class M_pilih extends CI_Model
             return false;
         }
     }
+
+    public function get_calon()
+    {
+        return $this->db->get('calon_kades')->result();
+    }
+
+    public function get_id()
+    {
+        return $this->db->where('status', '0')->order_by('id', rand())->get('surat_suara', 1)->row();
+    }
 }
