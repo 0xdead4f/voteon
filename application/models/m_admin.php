@@ -31,4 +31,32 @@ class M_admin extends CI_Model
     {
         return $this->db->get('data_pemilih')->result();
     }
+
+    //5.1 Tabulasi surat suara untuk menghitung seluruh surat suara
+    public function get_surat_suara()
+    {
+        return $this->db->where('status', '1')->where('suara !=', '')->get('surat_suara')->num_rows();
+    }
+
+    //5.2 Tabulasi surat suara untuk menghitung seluruh surat suara (dua)
+    public function get_data_calon()
+    {
+        return $this->db->get('calon_kades')->result();
+    }
+
+    //5.3 Tabulasi surat suara untuk menghitung seluruh surat suara (tiga)
+    public function get_suara($limit)
+    {
+
+
+        return $this->db->select('id')->where('status', '1')->where('suara !=', '')->limit(1, $limit)->get('surat_suara')->result();
+    }
+
+    //5.4 Tabulasi surat suara untuk menghitung seluruh surat suara (empat)
+    public function get_suara_2($limit)
+    {
+
+
+        return $this->db->select('suara')->where('status', '1')->where('suara !=', '')->limit(1, $limit)->get('surat_suara')->result();
+    }
 }

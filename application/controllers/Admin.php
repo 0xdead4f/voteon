@@ -51,5 +51,35 @@ class Admin extends CI_Controller
         $data['warga'] = $this->m_admin->get_warga();
         $this->load->view('admin/v_warga', $data);
     }
+    
+    //5. menampilkan halaman tabulasi surat suara
+    public function tabulasi()
+    {
+        if (!$this->session->userdata('login')) {
+            redirect('admin');
+        }
+
+        $data['surat_suara_num_rows'] = $this->m_admin->get_surat_suara();
+        $data['data_calon'] = $this->m_admin->get_data_calon();
+        $this->load->view('admin/v_tabulasi', $data);
+    }
+
+    public function a()
+    {
+
+        $z = $this->input->post('limit');
+        foreach ($this->m_admin->get_suara($z) as $a) {
+            echo $a->id;
+        }
+    }
+
+    public function b()
+    {
+        $z = $this->input->post('limit');
+        foreach ($this->m_admin->get_suara_2($z) as $a) {
+            echo $a->suara;
+        }
+    }
+
 }
 
