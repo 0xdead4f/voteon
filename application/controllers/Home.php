@@ -9,7 +9,6 @@ class Home extends CI_Controller
         $data = [
             'title' => 'Home'
         ];
-        $this->load->view('layout/v_header', $data);
         $this->load->view('home/v_home');
     }
 
