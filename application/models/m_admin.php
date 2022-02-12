@@ -65,4 +65,17 @@ class M_admin extends CI_Model
     {
         return $this->db->select_max('nomor')->get('calon_kades')->row();
     }
+
+     //7. Proses insert calon kades
+     public function insert_calon($object)
+     {
+         $this->db->insert('calon_kades', $object);
+ 
+         if ($this->db->affected_rows() > 0) {
+             return true;
+         } else {
+             return false;
+         }
+     }
+
 }
