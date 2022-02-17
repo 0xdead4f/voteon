@@ -120,6 +120,10 @@ Sebuah aplikasi yang membutuhkan proses pertukaran data tidak akan baik jika tid
 - URI Security
 - Register_globals
 
+## Manfaat dan kegunaan
+Manfaat dari aplikasi ini adalah mengurangi proses fisik pada pemilihan umum. pada proses fisik pemilihan umum sangat menggunakan biaya dan tenaga yang besar seperti pergi ke tempatnya, penggunaan kertas, penggunaan tinta, penggunaan sumber daya manusia. dengan penggunaan aplikasi ini maka semuanya akan serba mudah hanya melalui komputer saja. ditambah saat ini sedang maraknya wabah Covid-19. kita dipermudah dalam melakukan proses pemilu menggunakan aplikasi digital.
+
+
 ## Creator
 
 Creator dalam pembuatan aplikasi ini terdapat 3 orang yaitu : 
