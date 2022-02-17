@@ -80,9 +80,15 @@ begitu juga untuk token bisa melihat pada tabel data_suara. gunakan token yang s
 kira-kira seperti ini proses yang terjadi jika diurutkan :
 - Warga mendapatkan token, kemudian masuk ke website E-Voting
 - Pilih menu E-Voting
+![1](https://github.com/cap10jack/voteon/tree/main/assets/images/warga-1.png)
 - Masukan NIK dan Token yang telah dibagikan
+![2](https://github.com/cap10jack/voteon/tree/main/assets/images/warga-2.png)
 - Pilih calon kepala desa
+![3](https://github.com/cap10jack/voteon/tree/main/assets/images/warga-3.png)
+- Konfirmasi pilihan
+![4](https://github.com/cap10jack/voteon/tree/main/assets/images/warga-4.png)
 - Selesai
+![5](https://github.com/cap10jack/voteon/tree/main/assets/images/warga-5.png)
 
 tata cara untuk proses pemilihan warga dibuatkan video tutorialnya dengan link berikut :
 [Tata Cara Pemilihan](https://www.youtube.com/watch?v=gMeFZJldKOs>)
