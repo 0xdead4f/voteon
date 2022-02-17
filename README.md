@@ -22,6 +22,8 @@ Beberapa aplikasi yang harus dimiliki untuk menjalankan website ini :
 - Teks Editor jenis apapun (Rekomendasi : Visual Studio Code)
 - Web Browser
 
+Notes : diperlukan internet untuk tampilan desain yang lebih baik (karena menggunakan beberapa komponen bootstrap online)
+
 
 ## Proses Installasi
 
