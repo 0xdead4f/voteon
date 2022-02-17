@@ -27,7 +27,12 @@
     <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'> -->
     <!--/script-->
     <script src="<?php echo base_url(); ?>assets/js/modernizr.custom.97074.js"></script>
-
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -73,7 +78,7 @@
         </div>
     </div>
 
-    <img src="<?php echo base_url(); ?>assets/images/present.png" />
+
     <div class="copy" style="margin-top:0px;">
         <p>&copy; Design by VoteOn 2022 </p>
     </div>

@@ -119,8 +119,8 @@ class Admin extends CI_Controller
         }
 
         if ($status) {
-            $this->session->set_flashdata('success', 'Setup Success');
-            redirect('admin/menu');
+            $this->session->set_flashdata('success', 'Berhasil input calon');
+            redirect('admin/calon');
         } else {
             $this->session->set_flashdata('fail', 'Setup Gagal');
             redirect('admin/calon');
@@ -159,7 +159,7 @@ class Admin extends CI_Controller
         $object = array('status' => 0);
         $status = $this->db->where('status', 1)->update('data_suara', $object);
         if ($status) {
-            $this->session->set_flashdata('success', 'Berhasil reset surat suara');
+            $this->session->set_flashdata('success', 'Berhasil reset data suara');
             redirect('admin/opsi');
         } else {
             $this->session->set_flashdata('fail', 'Gagal reset data suara');
@@ -197,21 +197,33 @@ class Admin extends CI_Controller
     }
 
 
-    //membuat proses insert data pemilih
+    //membuat validasi insert pemilih
     public function insert_pemilih()
     {
-        $object = array(
-            'id' => $this->input->post('id'),
-            'nik' => $this->input->post('nik'),
-            'status' => $this->input->post('status')
-        );
-        $status = $this->db->insert('data_pemilih', $object);
-        if ($status) {
-            $this->session->set_flashdata('success', 'Berhasil input data');
-            redirect('admin/pemilih');
-        } else {
-            $this->session->set_flashdata('fail', 'Gagal input data');
-            redirect('admin/pemilih');
+        $this->load->library('form_validation');
+
+        if ($this->input->method() === 'post') {
+            $this->form_validation->set_rules('id', 'ID', 'required|is_unique[data_pemilih.id]');
+            $this->form_validation->set_rules('nik', 'NIK', 'required|is_unique[data_pemilih.nik]');
+            $this->form_validation->set_rules('status', 'Status', 'required');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('admin/v_inputpemilih');
+            } else {
+                $object = array(
+                    'id' => $this->input->post('id'),
+                    'nik' => $this->input->post('nik'),
+                    'status' => $this->input->post('status')
+                );
+                $status = $this->db->insert('data_pemilih', $object);
+                if ($status) {
+                    $this->session->set_flashdata('success', 'Berhasil input data');
+                    redirect('admin/pemilih');
+                } else {
+                    $this->session->set_flashdata('fail', 'Gagal input data');
+                    redirect('admin/pemilih');
+                }
+            }
         }
     }
 
