@@ -129,7 +129,7 @@ Sebuah aplikasi yang membutuhkan proses pertukaran data tidak akan baik jika tid
 - Register_globals
 
 ## Manfaat dan kegunaan
-Manfaat dari aplikasi ini adalah mengurangi proses fisik pada pemilihan umum. pada proses fisik pemilihan umum sangat menggunakan biaya dan tenaga yang besar seperti pergi ke tempatnya, penggunaan kertas, penggunaan tinta, penggunaan sumber daya manusia. dengan penggunaan aplikasi ini maka semuanya akan serba mudah hanya melalui komputer saja. ditambah saat ini sedang maraknya wabah Covid-19. kita dipermudah dalam melakukan proses pemilu menggunakan aplikasi digital.
+Manfaat dari aplikasi ini adalah mengurangi proses fisik pada pemilihan umum. Pada proses fisik pemilihan umum, menggunakan biaya dan tenaga yang sangat besar. Contohnya seperti waktu dan tenaga para pemilih menuju tempat pemilihan, penggunaan kertas dan tinta, serta penggunaan sumber daya manusia. Oleh karena itu dengan penggunaan aplikasi VoteOn ini, segala hal akan menjadi lebih mudah yaitu dapat dengan menggunakan komputer atau smartphone dan dapat dilakukan dimana saja. Selain itu, di saat maraknya wabah Covid-19, kita dapat menggunakan teknologi untuk mempermudah proses pemilu menggunakan aplikasi digital.
 
 
 ## Creator
