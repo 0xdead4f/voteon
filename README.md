@@ -38,17 +38,17 @@ cd voteon
 
 selanjutnya silahkan buka teks editor dan buka folder application/config/config.php. ganti base_url sesuai dengan port kalian. jika port defaultnya adalah 80, maka tidak perlu mengganti apapun. contoh jika port default :
 ```php
-26: $config['base_url'] = 'http://localhost/voteon/';;
+26: $config['base_url'] = 'http://localhost/voteon/';
 ```
 
 jika port diganti menjadi 8080 seperti berikut :
 ```php
-26: $config['base_url'] = 'http://localhost:8080/voteon/';;
+26: $config['base_url'] = 'http://localhost:8080/voteon/';
 ```
 
 jika sudah mengganti file pada config.php selanjutnya anda pergi ke application/config/database.php dan ganti username serta password sesuai milik kalian. jika menggunakan username dan password default maka biarkan saja (tidak perlu diganti).  
 ```php
-79:	'username' => 'root',
+79: 'username' => 'root',
 80: 'password' => '',
 ```
 
@@ -122,7 +122,7 @@ Sebuah aplikasi yang membutuhkan proses pertukaran data tidak akan baik jika tid
 
 ## Creator
 
-Creator dalam pembuatan aplikasi ini terdapat 3 orang yaitu
-[Adiva Fiqri Nugraha](https://github.com/adivafiqri)
-[Gusti Agung](https://github.com/cap10jack)
-[Shakira Putri](https://github.com/shakiraayunda)
+Creator dalam pembuatan aplikasi ini terdapat 3 orang yaitu : 
+- [Adiva Fiqri Nugraha](https://github.com/adivafiqri)
+- [Gusti Agung](https://github.com/cap10jack)
+- [Shakira Putri](https://github.com/shakiraayunda)
