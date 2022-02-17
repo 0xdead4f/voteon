@@ -33,7 +33,9 @@ Silahkan download zip file pada github ini secara langsung atau bisa menggunakan
 git clone https://github.com/cap10jack/voteon.git
 ```
 
-Jika File didownload secara manual silahkan lakukan ekstrak pada folder htdocs, jika menggunakan git bash maka folder otomatis akan terbuat dengan nama voteon. buka folder voteon atau jika menggunakan command.
+Jika File didownload secara manual silahkan lakukan ekstrak pada folder htdocs, jika menggunakan git bash maka folder otomatis akan terbuat dengan nama voteon. 
+*(NOTES : pastikan nama folder bernama **voteon** jika belum, harap mengganti menjadi **voteon**)*
+buka folder voteon atau jika menggunakan command seperti berikut :
 ```
 cd voteon
 ``` 
@@ -138,3 +140,6 @@ Creator dalam pembuatan aplikasi ini terdapat 3 orang yaitu :
 - [Adiva Fiqri Nugraha](https://github.com/adivafiqri)
 - [Gusti Agung](https://github.com/cap10jack)
 - [Shakira Putri](https://github.com/shakiraayunda)
+
+## Release file pada link berikut
+[Release Full Installer VoteOn](https://github.com/cap10jack/voteon/releases/tag/1.0.1)
