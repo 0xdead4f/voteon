@@ -17,7 +17,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/login/css/style.css">
 
-    <title>Log In</title>
+    <title>VoteOn - Log In</title>
 
 
 
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="<?= base_url(); ?>assets/login/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+                    <img src="<?= base_url(); ?>assets/login/images/iconic.png" alt="Image" class="img-fluid">
                 </div>
                 <div class="col-md-6 contents">
                     <div class="row justify-content-center">

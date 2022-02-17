@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KataKembara - E voting</title>
+    <title>VoteOn - E voting</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,8 +58,8 @@
         <div class="intro-container wow fadeIn">
             <h1 class="mb-4 pb-0">The <span>VoteOn</span> <br> E Voting</h1>
             <p class="mb-4 pb-0">Pemilihan Kepala Desa Putat Nutug</p>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-            <a href="#login" class="about-btn scrollto">Vote</a>
+            <a href="https://youtu.be/gMeFZJldKOs" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <a href="pilih" class="about-btn scrollto">Vote</a>
         </div>
     </section>
 
@@ -72,7 +72,7 @@
                 <div class="col-lg-5">
                     <h2>About voteOn</h2>
                     <p>voteOn adalah portal pemilihan umum bagi warga desa Putat Nutug untuk memilih kepala desa pada tahun 2022.
-                        Website ini dibangun dengan HTML , CSS dan PHP dengan menggunakan framework bootstrap. Website ini dibuat untuk memenuhi project tugas akhir mata kuliah Pemrograman Web tingkat III RPLK
+                        Website ini dibangun dengan HTML , CSS dan PHP dengan menggunakan framework Code Igniter 3 dan Bootstrap. Website ini dibuat untuk memenuhi project tugas akhir mata kuliah Pemrograman Web tingkat III RPLK
                     </p>
                 </div>
                 <div class="col-lg-6">
@@ -102,7 +102,7 @@
 
     </section>
 
-    
+
 
     <!--==========================
     Footer
@@ -120,7 +120,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>KataKembara</strong> 2022
+                &copy; Copyright <strong>VoteOn</strong> 2022
             </div>
             <div class="credits">
                 Designed by <a href="https://bootstrapmade.com/">Adiva, Ngurah, Shakira</a>
